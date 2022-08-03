@@ -12,33 +12,30 @@ import { ContextProvider } from "../../Global/Context";
 
 const Navbar = () => {
   // data by context api
-  const { user, model, openModel, loader,logout } = useContext(ContextProvider);
+  const { user, model, openModel, loader, logout } =
+    useContext(ContextProvider);
 
   // for open model when clock onn register  / login
   const openForms = () => {
     openModel();
   };
 
-const userLogout =()=>{
-   logout()
-}
-
+  const userLogout = () => {
+    logout();
+  };
   const checkUser = () => {
-    return !loader && user ? (
-      <li>
-        {user.displayName} / <span onClick={userLogout}>logout</span>
-      </li>
+    return !loader ? (
+      !loader && user ? (
+        <li>
+          {user.displayName} / <span onClick={userLogout}>logout</span>
+        </li>
+      ) : (
+        <li onClick={openForms}>Register / Login </li>
+      )
     ) : (
-      <li className="pt-2" onClick={openForms}>
-        Register / Login{" "}
-      </li>
+      "...."
     );
   };
-
-
-
-
-
 
   return (
     <div className="container">
