@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-
 const Slider = () => {
   const [data, setData] = useState([]);
-
   useEffect(() => {
     axios.get("./Json/json.json").then((res) => setData(res.data));
   }, []);

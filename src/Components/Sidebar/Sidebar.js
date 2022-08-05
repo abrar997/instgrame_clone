@@ -2,11 +2,16 @@ import React, { useState, useContext } from "react";
 import { ContextProvider } from "../../Global/Context";
 const Sidebar = () => {
   const { loader, user } = useContext(ContextProvider);
-  const userName = !loader && user ? user.displayName : "";
+  const userName = !loader && user && user.displayName ? user.displayName : "";
   const [state] = useState([
-    { id: 3, name: "JS", img: "" },
-    { id: 1, name: "Python", img: "" },
-    { id: 2, name: "React ", img: "" },
+    { id: 1, name: "Python", img: "./images/suggest/3.jpg", type: "follwers " },
+    {
+      id: 2,
+      name: "React ",
+      img: "./images/suggest/4.jpg",
+      type: "new instgram",
+    },
+    { id: 3, name: "JS", img: "./images/suggest/2.jpg", type: "new instgram" },
   ]);
 
   return (
@@ -24,14 +29,25 @@ const Sidebar = () => {
 
       <div className="sidebar__list">
         <h3> Suggestions for you </h3>
-        <div className="sidebar__list-user">
-          <div className="sidebar__list-a">
-            <div className="sidebar__list-a-img"></div>
-          </div>
-          <div className="sidebar__list-b">
-            <div className="sidebar__list-b-img"></div>
-          </div>
-        </div>
+        {state.map((user) => {
+          return (
+            <div className="sidebar__list-user">
+              <div className="sidebar__list-a" key={user.id}>
+                <div className="sidebar__list-a-img">
+                  <img src={user.img} alt={user.name} />
+                </div>
+                <div className="sidebar__list-a-details">
+                  <span className="sidebar__list-a-name"> {user.name}</span>
+                  <span className="sidebar__list-a-type">{user.type} </span>
+                </div>
+              </div>
+
+              <div className="sidebar__list-b">
+                <div className="sidebar__list-b-img">Follow </div>
+              </div>
+            </div>
+          );
+        })}
       </div>
     </div>
   );

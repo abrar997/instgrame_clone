@@ -26,11 +26,11 @@ const Navbar = () => {
   const checkUser = () => {
     return !loader ? (
       !loader && user ? (
-        <li>
+        <li  className="log-out">
           {user.displayName} / <span onClick={userLogout}>logout</span>
         </li>
       ) : (
-        <li onClick={openForms}>Register / Login </li>
+        <li className="login-register"  onClick={openForms}>Register / Login </li>
       )
     ) : (
       "...."
@@ -38,12 +38,12 @@ const Navbar = () => {
   };
 
   return (
-    <div className="container">
-      <div className="navbars row">
+    <div className="">
+      <div className="navbars ">
         {/* logo */}
         <div className="navabr_first col-lg-3">
           <div className="navbar-first-logo">
-            <img className="" src={"/images/logo-insta.png"} />
+            <img className="logo-images" src={"/images/logo-insta.png"} />
           </div>
         </div>
 
@@ -70,13 +70,6 @@ const Navbar = () => {
             <li>
               <FaRegHeart className=" navbar_icons" />
             </li>
-            {/* {user ? (
-              <span className="fw-bold">{user.name}</span>
-            ) : ( */}
-            {/* <li className="pt-2" onClick={openForms}>
-              Register / Login{" "}
-            </li>
-            )} */}
             {checkUser()}
           </ul>
         </div>
