@@ -25,7 +25,7 @@
     "img": "images/users/5.jfif"
   },
   {
-    "id": 5,
+    "id": 11,
     "name": "mum",
     "img": "images/users/8.jpg"
   },
@@ -40,12 +40,12 @@
     "img": "images/users/7.jpg"
   },
   {
-    "id": 7,
+    "id": 9,
     "name": "Dearly",
     "img": "images/users/1.png"
   },
   {
-    "id": 7,
+    "id": 10,
     "name": "Dearly",
     "img": "images/users/2.png"
   },

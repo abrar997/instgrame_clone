@@ -1,7 +1,7 @@
-import React from 'react'
-import firebase from 'firebase/compat/app';
-import 'firebase/compat/auth';
-import 'firebase/compat/firestore';
+import React from "react";
+import firebase from "firebase/compat/app";
+import "firebase/compat/auth";
+import "firebase/compat/firestore";
 import 'firebase/compat/storage';
 
 const firebaseConfig = {
@@ -14,7 +14,8 @@ const firebaseConfig = {
   measurementId: "G-S9Y8V6JLNC",
 };
 firebase.initializeApp(firebaseConfig);
-// const db = firebase.firestore();
+const db = firebase.firestore();
 const auth = firebase.auth();
 const storage = firebase.storage();
-export {  auth, storage };
+
+export { db, auth, storage };

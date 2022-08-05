@@ -245,26 +245,151 @@ body {
   display: none;
 }
 /* icons */
-.camera{
-color: #f83a63;
-font-size: 30px;
-cursor: pointer;
-
+.camera {
+  color: #f83a63;
+  font-size: 30px;
+  cursor: pointer;
 }
 
-.create__second-a{
+.create__second-a {
   flex: 1;
 }
-.create__second-b{
+.create__second-b {
   flex: 1;
   text-align: right;
+}
+.btn-sweet {
+  background-color: #f83a63;
+  color: var(--white);
+  text-decoration: none;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 2px;
+  cursor: pointer;
+}
 
+/* posts */
+.posts {
+  width: 65%;
+  background-color: var(--white);
+  margin: 15px 0;
 }
-.btn-sweet{background-color:#f83a63;
-color: var(--white);
-text-decoration: none;
-border: none;
-padding: 6px 10px;
-border-radius: 2px;
-cursor: pointer;
+
+.posts_header {
+  display: flex;
+  align-items: center;
+  background-color: var(--white);
+  padding: 10px;
 }
+.posts_header-avator {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f83a63;
+  text-transform: uppercase;
+}
+.posts_header-name {
+  margin-left: 8px;
+  text-transform: capitalize;
+}
+.posts_img {
+  width: 100%;
+  overflow: hidden;
+}
+.posts_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*===================== == Post Start ===================== ==  */
+
+/*===================== == Commnet Start ===================== ==  */
+/* Comments */
+
+.comments {
+  margin-top: 10px;
+}
+.comments__input {
+  width: 100%;
+  height: 40px;
+  border-top: 1px solid #efefef;
+  border-bottom: 1px solid #efefef;
+  border-left: none;
+  border-right: none;
+  padding: 0 15px;
+  outline: none;
+}
+
+/* single comment */
+.comments__container {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  padding: 0 10px 10px 10px;
+}
+.comments_contaienr-name {
+  margin-right: 8px;
+  text-transform: capitalize;
+}
+.comments_contaienr-msg {
+  font-size: 14px;
+  color: silver;
+  font-weight: 300;
+}
+/*===================== == Commnet end ===================== ==  */
+
+/*===================== == Sidebar start ===================== ==  */
+/* Side bar start  */
+.sidebar {
+  position: fixed;
+  top: 100px;
+  right: 200px;
+  width: 25%;
+  padding-left: 25px;
+}
+.sider_user {
+  display: flex;
+  align-items: center;
+}
+.sidebar__user-avator {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: var(--white);
+  background-color: #f83a63;
+  border-radius: 50%;
+}
+.sidebar__user-name {
+  padding-left: 10px;
+  text-transform: capitalize;
+}
+
+.sidebar__list {
+  margin: 20px 0;
+}
+.sidebar__list h3 {
+  font-size: 15px;
+  font-weight: 400;
+  color: silver;
+}
+.sidebar__list-user {
+  display: flex;
+  align-items: center;
+}
+.sidebar__list-a {
+  flex: 1;
+}
+
+.sidebar__list-b {
+  flex: 1;
+}
+
+/*===================== == Sidebar end ===================== ==  */
